@@ -3,19 +3,21 @@
 
 
 :root{
-    --black1  : rgb(55, 54, 54);
-    --black2  : rgb(110, 110, 110);
-    --black3  : rgb(149, 149, 149);
+    --black1  : rgb(28, 35, 36);
+    --black2  : rgb(82, 82, 82);
+    --black3  : rgb(129, 129, 129);
     --yelBr : #F6F4EB;
-    --yelBrDark : #FFEECC;
-    --skyBlue  : #81bad7;
-    --darkSky : #6e92b5;
+    --yelBrDark : #ffe9bd;
+    --skyBlue  : #6a9bb3;
+    --darkSky : #2c4054;
     --blueBtn : rgb(43, 43, 173);
+    --royalBlue : rgb(55, 85, 177);
+    --royalBlueFresh : rgb(44, 89, 225);
 
     /*  */
     --main-color : #e02f6b;
     --blue : #0000ff;
-    --blue-dark : #18293c;
+    --blue-dark : #1b314c;
     --orange : #ffa500;
     --green-yellow : #cddc39;
     --pink-light : #efa2b4;
@@ -37,7 +39,6 @@
 }
 body{
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, var(--pink-light),var(--cyan-light));
     background-image: linear-gradient(to bottom right,var(--yelBrDark),var(--skyBlue),var(--darkSky));
     background-attachment: fixed;
     font-size: 16px;
@@ -59,7 +60,7 @@ body::before{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--orange);
+    background-color: var(--white-alpha-25);
     z-index: -1;
     opacity: 0.12;
 }
@@ -153,8 +154,9 @@ button{
     padding: 10px 28px;
     display: inline-block;
     border-radius: 30px;
-    color: var(--main-color);
-    color: var(--blueBtn);
+    color: var(--blue-dark);
+    color: var(--royalBlue);
+
     font-family: inherit;
     font-size: 16px;
     cursor: pointer;
@@ -171,7 +173,7 @@ button{
     top: 0;
     height: 100%;
     width: 0%;
-    background-color: var(--darkSky);
+    background-color: var(--yelBr);
     z-index: -1;
     transition: width 0.3s ease;
 }
@@ -180,7 +182,10 @@ button{
  
 }
 .btn:hover{
-    color: var(--white);
+    /* color: var(--white); */
+    color: var(--royalBlue);
+    color: var(--blue-dark);
+
 }
 
 
@@ -271,7 +276,8 @@ button{
 .header .nav-toggler span{
     height: 2px;
     width: 24px;
-    background-color: var(--blueBtn);
+    background-color: var(--royalBlue);
+
     position: relative;
     transition: background-color 0.3s ease;
 }
@@ -291,7 +297,8 @@ button{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--blueBtn);
+    background-color: var(--blue-dark);
+
 }
 .header .nav-toggler span::before{
     left: 0;
@@ -346,7 +353,7 @@ button{
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 90%;
+    height: 100%;
     border-radius: 10px;
     background-color: var(--white-alpha-25);
     width: 0%;
@@ -361,7 +368,7 @@ button{
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3%;
+    height: 100%;
     border-radius: 10px;
     background-color: var(--white-alpha-40);
     width: 0%;
@@ -372,7 +379,7 @@ button{
     width: 100%;
 }
 .header .nav-inner ul li a:hover{
-    color: var(--blueBtn);
+    color: var(--royalBlue);
 }
 /* -----*/
 /* Home */
@@ -457,6 +464,7 @@ button{
     flex-wrap: wrap;
 }
 .about-text .skill-item{
+    color: var(--royalBlue);
     background-color: var(--white-alpha-25);
     border: 1px solid var(--white-alpha-40);
     padding: 5px 15px;
@@ -513,10 +521,15 @@ button{
 .about-tabs .tab-item.active::before{
     width: 100%;
     background-color: var(--main-color);
+    background-color: var(--royalBlue);
+    color: var(--royalBlueFresh);
+
 }
 .about-tabs .tab-item.active{
     /* color: rgb(0, 200, 255); */
     color: var(--main-color);
+    color: var(--royalBlue);
+    color: var(--royalBlueFresh);
     opacity: 1;
     cursor: auto;
 }
@@ -537,7 +550,8 @@ button{
     left: 5px;
     height: 100%;
     width: 1px;
-    background-color: var(--main-color);
+    background-color: var(--royalBlue);
+    background-color: var(--royalBlueFresh);
 }
 .about-text .timeline-item{
     margin-bottom: 30px;
@@ -551,7 +565,8 @@ button{
     left: 0;
     height: 11px;
     width: 11px;
-    background-color: var(--main-color);
+    background-color: var(--royalBlue);
+    background-color: var(--royalBlueFresh);
     border-radius: 0 50% 50% 0;
 }
 .about-text .timeline-item:last-child{
@@ -559,7 +574,8 @@ button{
 }
 .about-text .timeline-item .date{
     display: block;
-    color: var(--main-color);
+    color: var(--royalBlue);
+    color: var(--royalBlueFresh);
     font-weight: 400;
     margin: 0 0 10px;
 }
@@ -752,6 +768,7 @@ button{
     background-color: var(--white-alpha-25);
     color: var(--black1); 
     color: var(--blueBtn);
+    color: var(--royalBlueFresh);
     margin: 6px 4px 0 0;
     transition: all 0.3s ease;
 }
@@ -761,8 +778,8 @@ button{
 
 }
 .contact-info-item .social-links a:hover{
-    color: var(--white);
-    background-color: var(--darkSky);
+    color: var(--yelBr);
+    background-color: var(--royalBlue);
 }
 
 /* ------- */
@@ -817,13 +834,13 @@ button{
 .page-loader div:nth-child(2){
     height: 45px;
     width: 45px;
-    border-color: var(--blue);
+    border-color: var(--yelBrDark);
     border-right-color: transparent !important;
 }
 .page-loader div:nth-child(3){
     height: 30px;
     width: 30px;
-    border-color: var(--black2);
+    border-color: var(--royalBlueFresh);
     border-bottom-color: transparent !important;
 }
 
