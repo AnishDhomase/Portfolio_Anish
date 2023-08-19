@@ -577,7 +577,18 @@ button{
 .portfolio-item-details{
     display: none;
 }
-
+.about-text b{
+    font-weight: 500;
+    color: var(--blue-dark);
+}
+.timeline b{
+    font-weight: 400;
+    color: #00004c;
+}
+.timeline i{
+    
+    color: #3b3b3f; 
+}
 
 /* ---------------   */
 /* Portfolio Section */
@@ -726,6 +737,9 @@ button{
     font-size: 20px;
     margin: 0 0 5px;
 }
+.contact-info-item p span{
+    font-weight: 400;
+}
 .contact-info-item .social-links a{
     font-size: 25px;
     display: inline-flex;
@@ -740,6 +754,11 @@ button{
     color: var(--blueBtn);
     margin: 6px 4px 0 0;
     transition: all 0.3s ease;
+}
+.contact-info-item .social-links a img{
+    width: 20px;
+    height: 20px;
+
 }
 .contact-info-item .social-links a:hover{
     color: var(--white);
