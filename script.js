@@ -123,7 +123,7 @@ window.addEventListener("load",function(){
 
     setTimeout(function(){
     document.querySelector(".page-loader").style.display = "none";
-    },1000);
+    },0);
 })
 
 
