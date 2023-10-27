@@ -15,11 +15,6 @@ tabsContainer.addEventListener("click", function (ev) {
 
 
 
-
-
-
-
-
 /*--------------------------Portfolio Item Details Popup --------------------------*/
 function togglePortfolioPopup(){
     document.querySelector(".portfolio-popup").classList.toggle("open");
@@ -52,23 +47,12 @@ document.querySelector(".pp-close").addEventListener("click", togglePortfolioPop
 
 
 
-
-
-
-
-
-
 //Closing popup by clicking outside of it
 document.addEventListener("click", function(ev){
     if(ev.target.classList.contains("pp-inner") && document.querySelector(".portfolio-popup").classList.contains("open")){
         togglePortfolioPopup();
     }
 });
-
-
-
-
-
 
 
 
@@ -81,6 +65,8 @@ function toggleNavbar(){
 }
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click",function(){
+    clickSound();
+
     hideSection();
     toggleNavbar();
     document.body.classList.toggle("hide-scrolling");
@@ -88,10 +74,11 @@ navToggler.addEventListener("click",function(){
 
 
 
-
 /*----------------Active Sections----------------- */
 document.addEventListener("click",function(ev){
     if(ev.target.classList.contains("link-item") && ev.target.hash !== ""){
+        clickSound();
+
         // active the overlay to prevent multiple clicks
         document.querySelector(".overlay").classList.add("active");
         navToggler.classList.add("hide");
@@ -116,13 +103,14 @@ document.addEventListener("click",function(ev){
 
 // page loader
 window.addEventListener("load",function(){
+    
     document.querySelector(".main").classList.remove("hidden");
     document.querySelector(".home-section").classList.add("active");
     /* Page loader*/
     document.querySelector(".page-loader").classList.add("fade-out");
 
     setTimeout(function(){
-    document.querySelector(".page-loader").style.display = "none";
+        document.querySelector(".page-loader").style.display = "none";
     },0);
 })
 
@@ -140,4 +128,11 @@ function EmailSend (){
     }).then(
       message => alert(message)
     );
+}
+
+
+// Sound Effect on click
+function clickSound(){
+    const sound= new Audio("click.mp3");
+    sound.play();
 }
