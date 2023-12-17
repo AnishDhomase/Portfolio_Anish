@@ -849,6 +849,13 @@ button{
 
 
 /* Responsiveness */
+@media (min-width:1350px){
+    .nav-toggler{
+        position: fixed;
+        top: 50px;
+        right: calc(10%);
+    }
+}
 @media (max-width:950px){
     .container{
         padding: 0;
